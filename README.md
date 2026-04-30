@@ -1,5 +1,5 @@
 # 🔬 PaperLens — Research Paper Explainer AI
-###Built with LangChain + Streamlit + OpenAI
+### Built with LangChain + Streamlit + OpenAI
 > Upload any PDF research paper and get a full technical breakdown — architecture diagrams, mathematical equations, worked examples, and an AI tutor ready to answer your questions.
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
@@ -267,19 +267,6 @@ Contains two prompts:
 **Symptom:** LaTeX like `\[ h_t = f(h_{t-1}, x_t) \]` appears as raw text in the chat panel.
 
 **Cause:** AI responses were injected into a raw HTML `<div>` via `unsafe_allow_html=True`, bypassing Streamlit's MathJax renderer.
-
-**Fix:** Replace the AI message block in `app.py` with native `st.markdown()`:
-
-```python
-# Before (broken)
-content = msg["content"].replace("\n", "<br>")
-st.markdown(f"<div class='chat-ai'>{content}</div>", unsafe_allow_html=True)
-
-# After (fixed)
-st.markdown("<div class='avatar-ai'>🔬 PaperLens AI</div>", unsafe_allow_html=True)
-with st.container():
-    st.markdown(msg["content"])   # LaTeX renders correctly here
-```
 
 ### Papers with scanned/image-only pages
 
