@@ -240,7 +240,7 @@ with st.sidebar:
         "API Key",
         value=st.session_state.api_key,
         type="password",
-        placeholder="sk-ant-api03-...",
+        placeholder="sk-proj-...",
         label_visibility="collapsed",
     )
     if api_key_input:

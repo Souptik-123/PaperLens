@@ -1,14 +1,15 @@
 from langchain.chains import RetrievalQA
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
+from config import OPENAI_MODEL, TEMPERATURE
 
 
 def build_qa_chain(vector_store, api_key: str, qa_prompt_template: str):
     llm = ChatOpenAI(
-        model="gpt-4o-mini",
+        model=OPENAI_MODEL,
         api_key=api_key,
-        temperature=0.3,
-        max_tokens=2000,
+        temperature=TEMPERATURE,
+        max_completion_tokens=2000,
     )
 
     prompt = PromptTemplate(
