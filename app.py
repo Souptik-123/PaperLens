@@ -376,7 +376,7 @@ if not st.session_state.paper_ready:
             """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    st.info("👈 Add your Anthropic API key and upload a PDF in the sidebar to get started.")
+    st.info("👈 Add your OpenAI API key and upload a PDF in the sidebar to get started.")
 
 else:
     # ── Paper loaded: show tabs ───────────────────────────────────────────
