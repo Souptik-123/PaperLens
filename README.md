@@ -2,6 +2,8 @@
 ### Built with LangChain + Streamlit + OpenAI
 > Upload any PDF research paper and get a full technical breakdown — architecture diagrams, mathematical equations, worked examples, and an AI tutor ready to answer your questions.
 
+### live link: https://paperlens-research-paper-explainer-ai.streamlit.app
+
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?logo=streamlit&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-0.1%2B-1C3C3C?logo=chainlink&logoColor=white)
